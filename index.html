@@ -3,93 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bean Haven Coffee</title>
+<title>Midnight Brew Café</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f5f2;
-    color:#333;
+    background:#111;
+    color:#eee;
 }
 
 header{
-    background:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80") center/cover;
-    height:90vh;
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
     text-align:center;
 }
 
 header h1{
-    font-size:60px;
+    font-size:64px;
+    color:#fff;
 }
 
 header p{
     margin:20px 0;
     font-size:22px;
+    color:#ddd;
 }
 
-button{
-    padding:15px 35px;
-    border:none;
-    background:#6f4e37;
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#c08b45;
     color:white;
-    font-size:18px;
-    cursor:pointer;
-    border-radius:30px;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#a36d2c;
 }
 
 nav{
-    background:#4b2e2b;
-    color:white;
+    position:sticky;
+    top:0;
+    background:#181818;
+    padding:18px;
     display:flex;
     justify-content:center;
     gap:40px;
-    padding:18px;
-    position:sticky;
-    top:0;
+    z-index:100;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-weight:bold;
 }
 
 section{
-    padding:60px 10%;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
 }
 
 h2{
     text-align:center;
     margin-bottom:40px;
-    color:#6f4e37;
+    color:#d9a35f;
+    font-size:36px;
 }
 
 .menu{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
     gap:25px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
+    background:#1c1c1c;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
     transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card img{
@@ -98,15 +114,15 @@ h2{
     object-fit:cover;
 }
 
-.card-body{
+.info{
     padding:20px;
 }
 
 .price{
-    color:#8B4513;
-    font-size:22px;
-    font-weight:bold;
     margin-top:10px;
+    color:#ffc46b;
+    font-size:24px;
+    font-weight:bold;
 }
 
 .gallery{
@@ -122,29 +138,30 @@ h2{
     border-radius:15px;
 }
 
-footer{
-    background:#4b2e2b;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
 .contact{
     text-align:center;
     line-height:2;
+    font-size:18px;
 }
 
+footer{
+    background:#181818;
+    padding:30px;
+    text-align:center;
+}
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
+
 <div>
-<h1>☕ Bean Haven</h1>
-<p>Fresh Coffee • Fresh Bakery • Cozy Atmosphere</p>
-<button onclick="alert('Welcome to Bean Haven!')">Order Now</button>
+<h1>☕ Midnight Brew Café</h1>
+<p>Premium Coffee • Homemade Desserts • Artisan Bakery</p>
+<a class="btn" href="#menu">View Menu</a>
 </div>
+
 </header>
 
 <nav>
@@ -155,61 +172,79 @@ footer{
 
 <section id="menu">
 
-<h2>Our Coffee Menu</h2>
+<h2>Today's Favorites</h2>
 
 <div class="menu">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Espresso</h3>
-<p>Rich and bold espresso made from premium beans.</p>
-<div class="price">$3.50</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1494314671902-399b18174975?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Cappuccino</h3>
-<p>Fresh espresso with steamed milk and foam.</p>
-<div class="price">$4.50</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Latte</h3>
-<p>Silky smooth milk with rich espresso.</p>
-<div class="price">$5.00</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Mocha</h3>
-<p>Chocolate blended with espresso and milk.</p>
-<div class="price">$5.50</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Cold Brew</h3>
-<p>Slow brewed coffee served over ice.</p>
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Flat White</h3>
+<p>Smooth espresso with silky steamed milk.</p>
 <div class="price">$4.75</div>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80">
-<div class="card-body">
-<h3>Croissant</h3>
-<p>Fresh buttery French croissant.</p>
-<div class="price">$2.95</div>
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Caramel Latte</h3>
+<p>Espresso blended with caramel and creamy milk.</p>
+<div class="price">$5.95</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Vanilla Latte</h3>
+<p>Fresh vanilla syrup with premium espresso.</p>
+<div class="price">$5.50</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Blueberry Muffin</h3>
+<p>Freshly baked every morning.</p>
+<div class="price">$3.95</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Chocolate Cake</h3>
+<p>Rich chocolate sponge with cream.</p>
+<div class="price">$6.25</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Cinnamon Roll</h3>
+<p>Soft roll topped with sweet icing.</p>
+<div class="price">$4.20</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Iced Matcha Latte</h3>
+<p>Premium Japanese matcha with milk.</p>
+<div class="price">$5.80</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80">
+<div class="info">
+<h3>Fresh Cheesecake</h3>
+<p>Classic creamy cheesecake with berries.</p>
+<div class="price">$6.50</div>
 </div>
 </div>
 
@@ -219,17 +254,17 @@ footer{
 
 <section id="gallery">
 
-<h2>Coffee Gallery</h2>
+<h2>Café Gallery</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80">
-
-<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80">
-
-<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80">
+<img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=900&q=80">
 
 <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80">
 
 </div>
 
@@ -237,21 +272,21 @@ footer{
 
 <section id="contact">
 
-<h2>Visit Us</h2>
+<h2>Visit Midnight Brew</h2>
 
 <div class="contact">
-<p><strong>📍 Address:</strong> 123 Coffee Street</p>
-<p><strong>📞 Phone:</strong> (555) 123-4567</p>
-<p><strong>📧 Email:</strong> hello@beanhaven.com</p>
-<p><strong>🕒 Open:</strong> Every Day 7:00 AM – 9:00 PM</p>
+<p>📍 25 Coffee Avenue</p>
+<p>📞 +1 (555) 987-6543</p>
+<p>📧 hello@midnightbrew.com</p>
+<p>🕒 Open Daily: 6:30 AM – 11:00 PM</p>
 </div>
 
 </section>
 
 <footer>
 
-<h3>Bean Haven Coffee ☕</h3>
-<p>Made with ❤️ and Fresh Coffee</p>
+<h3>☕ Midnight Brew Café</h3>
+<p>Where every cup tells a story.</p>
 
 </footer>
 
