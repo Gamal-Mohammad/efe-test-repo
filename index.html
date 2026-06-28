@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean Haven Coffee</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f8f5f2;
+    color:#333;
+}
+
+header{
+    background:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80") center/cover;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+header h1{
+    font-size:60px;
+}
+
+header p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    background:#6f4e37;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:30px;
+}
+
+nav{
+    background:#4b2e2b;
+    color:white;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:18px;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#6f4e37;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.price{
+    color:#8B4513;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+footer{
+    background:#4b2e2b;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.contact{
+    text-align:center;
+    line-height:2;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h1>☕ Bean Haven</h1>
+<p>Fresh Coffee • Fresh Bakery • Cozy Atmosphere</p>
+<button onclick="alert('Welcome to Bean Haven!')">Order Now</button>
+</div>
+</header>
+
+<nav>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="menu">
+
+<h2>Our Coffee Menu</h2>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Espresso</h3>
+<p>Rich and bold espresso made from premium beans.</p>
+<div class="price">$3.50</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1494314671902-399b18174975?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Cappuccino</h3>
+<p>Fresh espresso with steamed milk and foam.</p>
+<div class="price">$4.50</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Latte</h3>
+<p>Silky smooth milk with rich espresso.</p>
+<div class="price">$5.00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Mocha</h3>
+<p>Chocolate blended with espresso and milk.</p>
+<div class="price">$5.50</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Cold Brew</h3>
+<p>Slow brewed coffee served over ice.</p>
+<div class="price">$4.75</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80">
+<div class="card-body">
+<h3>Croissant</h3>
+<p>Fresh buttery French croissant.</p>
+<div class="price">$2.95</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Coffee Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Visit Us</h2>
+
+<div class="contact">
+<p><strong>📍 Address:</strong> 123 Coffee Street</p>
+<p><strong>📞 Phone:</strong> (555) 123-4567</p>
+<p><strong>📧 Email:</strong> hello@beanhaven.com</p>
+<p><strong>🕒 Open:</strong> Every Day 7:00 AM – 9:00 PM</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>Bean Haven Coffee ☕</h3>
+<p>Made with ❤️ and Fresh Coffee</p>
+
+</footer>
+
+</body>
+</html>
